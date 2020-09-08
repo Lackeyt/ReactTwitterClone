@@ -1,16 +1,42 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-function Tweet(){
-  // const name = "Thato";
-  // const name2 = "Haley";
+function Tweet(props){
   return (
     <React.Fragment>
-      {/* <h3>3a</h3>
-      <h3>{name} and {name2}</h3>
-      <p><em>Firebase entries not saving!</em></p>
-      <hr/> */}
+    <p>{props.tweetText}</p>
+    <p>Tweet by: {props.userName}</p>
     </React.Fragment>
   );
 }
 
+Tweet.propTypes = {
+  tweetText: PropTypes.string.isRequired,
+  userName: PropTypes.string.isRequired
+};
+
 export default Tweet;
+
+// function ListItem(props) {
+//   // Correct! There is no need to specify the key here:
+//   return <li>{props.value}</li>;
+// }
+
+// function NumberList(props) {
+//   const numbers = props.numbers;
+//   const listItems = numbers.map((number) =>
+//     // Correct! Key should be specified inside the array.
+//     <ListItem key={number.toString()} value={number} />
+//   );
+//   return (
+//     <ul>
+//       {listItems}
+//     </ul>
+//   );
+// }
+
+// const numbers = [1, 2, 3, 4, 5];
+// ReactDOM.render(
+//   <NumberList numbers={numbers} />,
+//   document.getElementById('root')
+// );
