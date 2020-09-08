@@ -1,7 +1,7 @@
 import React from "react";
 import Tweet from "./Tweet";
 
-const masterTweetList= [
+const masterTweetList = [
   {
     tweetText: "Blah blah blah here's my latest tweet",
     userName: "Tyson"
